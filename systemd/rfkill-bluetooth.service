@@ -1,0 +1,10 @@
+[Unit]
+Description=Turns off bluetooth on system boot
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/sbin/rfkill block bluetooth
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Lock the screen on suspend
+
+[Service]
+User=%i
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/xscreensaver-command -lock
+
+[Install]
+WantedBy=suspend.target
